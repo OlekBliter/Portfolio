@@ -438,7 +438,8 @@ main .s4 .right-part {
 main .s4 .right-part img {
     width: 80%;
     border-radius: 10px;
-    border: 5px dotted rgb(211, 48, 48);
+    border: 5px solid rgb(211, 48, 48);
+    outline: 5px dotted rgb(211, 48, 48);
 }
 
 @media screen and (max-width: 1100px) {
