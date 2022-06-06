@@ -306,7 +306,7 @@ main .s2 .right-part .swiper {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    padding: 70px;
+    padding: 50px;
     filter: grayscale(40%)
 }
 
