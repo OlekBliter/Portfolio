@@ -369,6 +369,108 @@ main .s3 .left-part .content p {
     letter-spacing: 3px;
 }
 
+main .s3 .left-part .content ul {
+    text-align: left;
+    height: 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+main .s3 .left-part .content ul li {
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+main .s3 .left-part .content ul .li_row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+main .s3 .left-part .content ul .li_row .progress-bar {
+    width: 200px;
+    height: 25px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 2px;
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+main .s3 .left-part .content ul .li_row .progress-bar .myProgress {
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-size: 15px;
+    padding: 0 8px;
+    color: #0A0C18;
+}
+
+main .s3 .left-part .content ul .li_row:nth-child(1) .myProgress {
+    width: 85%;
+    background-color: orange;
+}
+
+main .s3 .left-part .content ul .li_row:nth-child(2) .myProgress {
+    width: 75%;
+    background-color: deepskyblue;
+}
+
+main .s3 .left-part .content ul .li_row:nth-child(3) .myProgress {
+    width: 30%;
+    background-color: yellow;
+}
+
+@keyframes progressHTML {
+    0% {
+        width: 20%;
+        padding: 0;
+        color: orange;
+    }
+
+    100% {
+        width: 85%;
+        padding: 0 8px;
+        color: #0a0c18;
+    }
+}
+
+@keyframes progressCSS {
+    0% {
+        width: 20%;
+        padding: 0;
+        color: deepskyblue;
+    }
+
+    100% {
+        width: 75%;
+        padding: 0 8px;
+        color: #0a0c18;
+    }
+}
+
+@keyframes progressJS {
+    0% {
+        width: 20%;
+        padding: 0;
+        color: yellow;
+    }
+
+    100% {
+        width: 30%;
+        padding: 0 8px;
+        color: #0a0c18;
+    }
+}
+
 main .s3 .right-part {
     width: 50%;
     height: 100%;
@@ -558,9 +660,11 @@ main .s4 .right-part img {
         0% {
             transform: translateX(0px);
         }
+
         50% {
             transform: translateX(25px);
         }
+
         100% {
             transform: translateX(0px);
         }
@@ -570,9 +674,11 @@ main .s4 .right-part img {
         0% {
             transform: translateX(0px);
         }
+
         50% {
             transform: translateX(-25px);
         }
+
         100% {
             transform: translateX(0px);
         }
