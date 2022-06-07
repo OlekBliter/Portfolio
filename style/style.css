@@ -123,7 +123,12 @@ svg {
 .header .right-part .social a svg {
     width: 100%;
     height: 100%;
-    fill: white;
+    fill: rgba(255, 255, 255, 0.65);
+    transition: .5s;
+}
+
+.header .right-part .social a svg:hover {
+    fill: rgb(255, 255, 255);
 }
 
 main .page-content {
@@ -291,11 +296,20 @@ main .s2 .right-part .swiper {
 .swiper-button-prev,
 .swiper-button-next {
     background-color: transparent;
+    transition: .5s;
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
     color: #0a0c18;
+}
+
+.swiper-button-next:hover{
+    transform: translateX(7px);
+}
+
+.swiper-button-prev:hover{
+    transform: translateX(-7px);
 }
 
 .swiper-pagination-bullet {
@@ -312,13 +326,20 @@ main .s2 .right-part .swiper {
 
 .swiper-slide a {
     padding: 10px 30px;
-    border: 1px solid black;
+    border: 1px solid #0a0c18;
     background-color: aliceblue;
-    color: black;
+    color: #0a0c18;
     box-shadow: 0 0 20px #fff;
     border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
+    transition: .5s ease-in-out;
+}
+
+.swiper-slide a:hover {
+    letter-spacing: 1.5px;
+    background-color: #0a0c18;
+    color: aliceblue;
 }
 
 main .s2 .right-part .swiper .slide1 {
@@ -523,6 +544,12 @@ main .s4 .left-part .content .social a {
 main .s4 .left-part .content .social a svg {
     width: 40px;
     height: 40px;
+    fill: rgba(255, 255, 255, 0.65);
+    transition: .5s;
+}
+
+main .s4 .left-part .content .social a svg:hover {
+    fill: rgb(255, 255, 255);
 }
 
 main .s4 .left-part .content p {
