@@ -55,7 +55,7 @@ document.getElementById('li_row2').onmouseenter = function () {
   document.getElementById('li_row3').style.display = 'none'
   document.getElementById('progress2').style.display = 'flex'
   document.getElementById('progress2').style.marginTop = '10px'
-  document.getElementById('CSSprogress').style.animation = '1.5s progressHTML forwards'
+  document.getElementById('CSSprogress').style.animation = '1.5s progressCSS forwards'
 }
 document.getElementById('li_row2').onmouseleave = function () {
   document.getElementById('li_row2').style.height = ''
@@ -75,7 +75,7 @@ document.getElementById('li_row3').onmouseenter = function () {
   document.getElementById('li_row1').style.display = 'none'
   document.getElementById('progress3').style.display = 'flex'
   document.getElementById('progress3').style.marginTop = '10px'
-  document.getElementById('JSprogress').style.animation = '1.5s progressHTML forwards'
+  document.getElementById('JSprogress').style.animation = '1.5s progressJS forwards'
 }
 document.getElementById('li_row3').onmouseleave = function () {
   document.getElementById('li_row3').style.height = ''

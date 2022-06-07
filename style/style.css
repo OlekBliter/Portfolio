@@ -744,6 +744,10 @@ main .s4 .right-part img {
         font-size: 10px !important;
     }
 
+    main .s3 .left-part .content ul {
+        align-items: center;
+    }
+
     main .s1 p,
     main .s2 p,
     main .s4 p {
