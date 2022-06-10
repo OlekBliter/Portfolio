@@ -27,7 +27,7 @@
     margin-top: -35px;
     margin-left: -35px;
     text-align: center;
-    animation: preloader-rotate 2s infinite linear;
+    animation: preloader-rotate 1.5s infinite linear;
 }
 
 @keyframes preloader-rotate {
@@ -50,8 +50,12 @@ p,
 strong,
 h3,
 img,
-svg {
+svg,
+.lines,
+.social,
+ul {
     background-color: transparent;
+    z-index: 99;
 }
 
 #pp-nav li .active span,
@@ -104,14 +108,14 @@ svg {
     justify-content: flex-end;
 }
 
-.header .right-part .social {
+.header .right-part .header-social {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 150px;
 }
 
-.header .right-part .social a {
+.header .right-part .header-social a {
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -120,14 +124,14 @@ svg {
     height: 30px;
 }
 
-.header .right-part .social a svg {
+.header .right-part .header-social a svg {
     width: 100%;
     height: 100%;
     fill: rgba(255, 255, 255, 0.65);
     transition: .5s;
 }
 
-.header .right-part .social a svg:hover {
+.header .right-part .header-social a svg:hover {
     fill: rgb(255, 255, 255);
 }
 
@@ -173,6 +177,81 @@ main .page-content {
 
 .lines .row2 .red-line {
     animation: bottomRedLineAnim 2s ease-in-out infinite;
+}
+
+.left-line{
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 10%;
+    z-index: 100;
+}
+
+#pagepiling .active .left-part .content h1 {
+    animation: 1.5s toLeftH1 forwards;
+}
+
+#pagepiling .active .left-part .content p, #pagepiling .active .left-part .content ul {
+    animation: 2.5s toLeftP forwards;
+}
+
+#pagepiling .active .left-part .content .lines {
+    animation: 1.5s toLeftLines forwards;
+}
+
+#pagepiling .active .left-part .content .social {
+    animation: 2.5s toLeftSocial forwards;
+}
+
+#pagepiling .active .right-part img, #pagepiling .active .right-part .swiper {
+    animation: 1.5s scaleImg forwards;
+}
+
+@keyframes toLeftH1 {
+    0%{
+        margin-left: -600px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
+
+@keyframes toLeftP {
+    0%{
+        margin-left: -700px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
+
+@keyframes toLeftLines {
+    0%{
+        margin-left: -800px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
+
+@keyframes toLeftSocial {
+    0%{
+        margin-left: -900px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
+
+@keyframes scaleImg {
+    0%{
+        transform: scale(0.8);
+        margin-left: 150px;
+    }
+    100%{
+        transform: scale(1);
+        margin-left: 0px;
+    }
 }
 
 main .s1 .left-part {
@@ -601,6 +680,10 @@ main .s4 .right-part img {
 
 @media screen and (max-width: 850px) {
 
+    
+    .left-line{
+        display: none;
+    }
     main .s1 .right-part img,
     main .s3 .right-part img,
     main .s4 .right-part img {
@@ -667,6 +750,11 @@ main .s4 .right-part img {
 }
 
 @media screen and (max-width: 650px) {
+    
+    
+    #pagepiling .active .left-part .content h1, #pagepiling .active .left-part .content p, #pagepiling .active .left-part .content ul, #pagepiling .active .left-part .content .lines, #pagepiling .active .left-part .content .social, #pagepiling .active .right-part img, #pagepiling .active .right-part .swiper {
+        animation: none;
+    }
 
     main .s1 .left-part .content,
     main .s2 .left-part .content,
@@ -737,7 +825,7 @@ main .s4 .right-part img {
         align-items: center;
         justify-content: center;
     }
-
+    
     .left-part {
         width: 80% !important;
         height: 40% !important;
