@@ -183,7 +183,7 @@ main .page-content {
     position: fixed;
     left: 0;
     height: 100%;
-    width: 10%;
+    width: 8%;
     z-index: 100;
 }
 
@@ -196,7 +196,7 @@ main .page-content {
 }
 
 #pagepiling .active .left-part .content .lines {
-    animation: 1.5s toLeftLines forwards;
+    animation: 2s toLeftLines forwards;
 }
 
 #pagepiling .active .left-part .content .social {
@@ -227,7 +227,7 @@ main .page-content {
 
 @keyframes toLeftLines {
     0%{
-        margin-left: -800px;
+        margin-left: -850px;
     }
     100%{
         margin-left: 0px;
@@ -370,6 +370,7 @@ main .s2 .right-part .swiper {
     width: 600px;
     height: 400px;
     border-radius: 20px;
+    margin: 0;
 }
 
 .swiper-button-prev,
@@ -471,12 +472,12 @@ main .s3 .left-part .content p {
 
 main .s3 .left-part .content ul {
     text-align: left;
+    width: 100%;
     height: 100px;
+    padding: 0 50px;
     display: flex;
     align-items: flex-start;
-    justify-content: space-around;
-    flex-direction: column;
-    list-style-type: none;
+    justify-content: space-between;
 }
 
 main .s3 .left-part .content ul li {
