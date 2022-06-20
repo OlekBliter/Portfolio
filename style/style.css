@@ -832,6 +832,10 @@ main .s4 .right-part img {
         animation: none;
     }
 
+    main .s3 .right-part .circle-box::before {
+        inset: -20px 0;
+    }
+
     main .s3 .right-part .circle-box {
         width: 250px;
         height: 250px;
