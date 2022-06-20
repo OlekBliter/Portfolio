@@ -188,9 +188,9 @@ main .page-content {
 }
 
 .showMeMore{
-    padding: 15px 35px;
+    padding: 10px 25px;
     border-radius: 20px;
-    background-color: rgb(211, 48, 48);
+    background-color: #D33030;
     color: aliceblue;
     text-decoration: none;
     font-size: 13px;
