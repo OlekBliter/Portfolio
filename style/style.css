@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     color: aliceblue;
     background-color: #0a0c18;
 }
@@ -70,7 +70,7 @@ ul {
 
 .pp-tooltip {
     border-radius: 10px;
-    padding: 0 4px
+    padding: 0 4px;
 }
 
 .left-part,
@@ -128,7 +128,7 @@ ul {
     width: 100%;
     height: 100%;
     fill: rgba(255, 255, 255, 0.65);
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .header .right-part .header-social a svg:hover {
@@ -179,7 +179,7 @@ main .page-content {
     animation: bottomRedLineAnim 2s ease-in-out infinite;
 }
 
-.left-line{
+.left-line {
     position: fixed;
     left: 0;
     height: 100%;
@@ -187,11 +187,27 @@ main .page-content {
     z-index: 100;
 }
 
+.showMeMore{
+    padding: 15px 35px;
+    border-radius: 20px;
+    background-color: rgb(211, 48, 48);
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 13px;
+    transition: .5s;
+    text-align: center;
+}
+
+.showMeMore:hover{  
+    letter-spacing: 3px;
+}
+
 #pagepiling .active .left-part .content h1 {
     animation: 1.5s toLeftH1 forwards;
 }
 
-#pagepiling .active .left-part .content p, #pagepiling .active .left-part .content ul {
+#pagepiling .active .left-part .content p,
+#pagepiling .active .left-part .content ul {
     animation: 2.5s toLeftP forwards;
 }
 
@@ -199,56 +215,58 @@ main .page-content {
     animation: 2s toLeftLines forwards;
 }
 
-#pagepiling .active .left-part .content .social {
-    animation: 2.5s toLeftSocial forwards;
+#pagepiling .active .left-part .content .social, #pagepiling .active .left-part .content a{
+    animation: 2.5s toLeftA forwards;
 }
 
-#pagepiling .active .right-part img, #pagepiling .active .right-part .swiper {
+#pagepiling .active .right-part img,
+#pagepiling .active .right-part .swiper,
+#pagepiling .active .right-part .circle-box {
     animation: 1.5s scaleImg forwards;
 }
 
 @keyframes toLeftH1 {
-    0%{
+    0% {
         margin-left: -600px;
     }
-    100%{
+    100% {
         margin-left: 0px;
     }
 }
 
 @keyframes toLeftP {
-    0%{
+    0% {
         margin-left: -700px;
     }
-    100%{
+    100% {
         margin-left: 0px;
     }
 }
 
 @keyframes toLeftLines {
-    0%{
+    0% {
         margin-left: -850px;
     }
-    100%{
+    100% {
         margin-left: 0px;
     }
 }
 
-@keyframes toLeftSocial {
-    0%{
+@keyframes toLeftA {
+    0% {
         margin-left: -900px;
     }
-    100%{
+    100% {
         margin-left: 0px;
     }
 }
 
 @keyframes scaleImg {
-    0%{
+    0% {
         transform: scale(0.8);
         margin-left: 150px;
     }
-    100%{
+    100% {
         transform: scale(1);
         margin-left: 0px;
     }
@@ -376,7 +394,7 @@ main .s2 .right-part .swiper {
 .swiper-button-prev,
 .swiper-button-next {
     background-color: transparent;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .swiper-button-prev::after,
@@ -384,11 +402,11 @@ main .s2 .right-part .swiper {
     color: #0a0c18;
 }
 
-.swiper-button-next:hover{
+.swiper-button-next:hover {
     transform: translateX(7px);
 }
 
-.swiper-button-prev:hover{
+.swiper-button-prev:hover {
     transform: translateX(-7px);
 }
 
@@ -401,7 +419,7 @@ main .s2 .right-part .swiper {
     align-items: flex-end;
     justify-content: center;
     padding: 50px;
-    filter: grayscale(40%)
+    filter: grayscale(40%);
 }
 
 .swiper-slide a {
@@ -413,7 +431,7 @@ main .s2 .right-part .swiper {
     border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
-    transition: .5s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 .swiper-slide a:hover {
@@ -474,9 +492,9 @@ main .s3 .left-part .content ul {
     text-align: left;
     width: 100%;
     height: 100px;
-    padding: 0 50px;
+    padding: 0 30px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -512,7 +530,7 @@ main .s3 .left-part .content ul .li_row .progress-bar .myProgress {
     border-bottom-left-radius: 20px;
     font-size: 15px;
     padding: 0 8px;
-    color: #0A0C18;
+    color: #0a0c18;
 }
 
 main .s3 .left-part .content ul .li_row:nth-child(1) .myProgress {
@@ -580,8 +598,51 @@ main .s3 .right-part {
     justify-content: center;
 }
 
-main .s3 .right-part img {
-    width: 70%;
+main .s3 .right-part .circle-box {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .s3 .right-part .circle-box::before {
+    content: "";
+    position: absolute;
+    inset: -10px 140px;
+    background: linear-gradient(45deg, #108dc7, #ef8e38);
+    transition: 0.5s;
+    animation: rotateCircleBorder 4s linear infinite;
+}
+
+main .s3 .right-part .circle-box::after {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    background-color: #0a0c18;
+    border-radius: 50%;
+}
+
+main .s3 .right-part .circle-box img {
+    width: 95%;
+    z-index: 101 !important;
+}
+
+@keyframes rotateCircleBorder {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+main .s3 .right-part .circle-box:hover::before {
+    inset: -20px 0;
 }
 
 main .s4 .left-part {
@@ -625,7 +686,7 @@ main .s4 .left-part .content .social a svg {
     width: 40px;
     height: 40px;
     fill: rgba(255, 255, 255, 0.65);
-    transition: .5s;
+    transition: 0.5s;
 }
 
 main .s4 .left-part .content .social a svg:hover {
@@ -677,12 +738,15 @@ main .s4 .right-part img {
         width: 400px;
         height: 300px;
     }
+
+    main .s3 .right-part .circle-box {
+        width: 350px;
+        height: 350px;
+    }
 }
 
 @media screen and (max-width: 850px) {
-
-    
-    .left-line{
+    .left-line {
         display: none;
     }
     main .s1 .right-part img,
@@ -725,6 +789,11 @@ main .s4 .right-part img {
         height: 250px;
     }
 
+    main .s3 .right-part .circle-box {
+        width: 300px;
+        height: 300px;
+    }
+
     main .s4 .left-part .content .social {
         width: 150px;
         display: flex;
@@ -751,10 +820,21 @@ main .s4 .right-part img {
 }
 
 @media screen and (max-width: 650px) {
-    
-    
-    #pagepiling .active .left-part .content h1, #pagepiling .active .left-part .content p, #pagepiling .active .left-part .content ul, #pagepiling .active .left-part .content .lines, #pagepiling .active .left-part .content .social, #pagepiling .active .right-part img, #pagepiling .active .right-part .swiper {
+    #pagepiling .active .left-part .content h1,
+    #pagepiling .active .left-part .content p,
+    #pagepiling .active .left-part .content ul,
+    #pagepiling .active .left-part .content .lines,
+    #pagepiling .active .left-part .content .social,
+    #pagepiling .active .left-part .content a,
+    #pagepiling .active .right-part img,
+    #pagepiling .active .right-part .swiper,
+    #pagepiling .active .right-part .circle-box {
         animation: none;
+    }
+
+    main .s3 .right-part .circle-box {
+        width: 250px;
+        height: 250px;
     }
 
     main .s1 .left-part .content,
@@ -818,6 +898,10 @@ main .s4 .right-part img {
     .lines {
         display: none;
     }
+
+    main h1 {
+        font-size: 30px !important;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -826,7 +910,7 @@ main .s4 .right-part img {
         align-items: center;
         justify-content: center;
     }
-    
+
     .left-part {
         width: 80% !important;
         height: 40% !important;
@@ -852,16 +936,16 @@ main .s4 .right-part img {
         padding: 0 !important;
     }
 
-    main h1 {
-        font-size: 30px !important;
-    }
-
     main p {
         font-size: 10px !important;
     }
 
     main .s3 .left-part .content ul {
         align-items: center;
+    }
+
+    main .s3 .right-part img{
+        width: 100%;
     }
 
     main .s1 p,
